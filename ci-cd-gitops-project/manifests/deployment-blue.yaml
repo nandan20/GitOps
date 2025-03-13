@@ -15,7 +15,11 @@ spec:
         version: blue
     spec:
       containers:
-        - name: myapp
-          image: your-docker-image:latest
+        - name: backend
+          image: nitishnandan/backend:latest
+          ports:
+            - containerPort: 3000
+        - name: frontend
+          image: nitishnandan/frontend:latest
           ports:
             - containerPort: 3000
